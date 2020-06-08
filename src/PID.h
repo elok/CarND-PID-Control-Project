@@ -35,9 +35,9 @@ class PID {
   /**
    * PID Errors
    */
-  double p_error;
-  double i_error;
-  double d_error;
+  double prev_cte; // cte
+  double int_cte;  // += cte
+  double diff_cte; // cte - prev_cte
 
   /**
    * PID Coefficients
