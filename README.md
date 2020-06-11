@@ -3,6 +3,41 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Introduction
+
+In this project, I implement a PID controller in C++ to maneuver the vehicle around the lake race track from the Behavioral Cloning Project. 
+
+# Implementation
+
+PID is made up of three components:
+
+1. P component - the steering angle in proportion to CTE with a proportional factor tau.
+
+```
+-tau * cte
+```
+
+2. I component - integral or sum of error to deal with systematic biases.
+
+```
+int_cte += cte
+tau_i * int_cte
+```
+
+3. D component - the differential component of the controller which helps to take temporal derivative of error.
+
+```
+diff_cte = cte - prev_cte
+prev_cte = cte
+-tau_d * diff_cte
+```
+
+## Reflection
+
+Describe the effect each of the P, I, D components had in your implementation.
+
+Describe how the final hyperparameters were chosen.
+
 ## Dependencies
 
 * cmake >= 3.5
