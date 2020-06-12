@@ -7,6 +7,8 @@ Self-Driving Car Engineer Nanodegree Program
 
 In this project, I implement a PID controller in C++ to maneuver the vehicle around the lake race track from the Behavioral Cloning Project. A cross track error is a distance of the vehicle from trajectory.
 
+[![Udacity PID Controller](https://img.youtube.com/vi/QTcdmmdm-Go/0.jpg)](https://www.youtube.com/watch?v=QTcdmmdm-Go)
+
 ## Implementation
 
 PID is made up of three components:
@@ -36,10 +38,13 @@ prev_cte = cte
 
 1. Describe the effect each of the P, I, D components had in your implementation.
 
-
+The P component is a necessity -- you can't do without it. It's the basic building block of all three components. The car would swerve uncontrollably with P. The I component is debatable. I found that it only works when very small. Even when it's zero, the car can still make it around the track. The D component is also a necessity. Missing the D component causes the car to swerve heavily back and forth, oscillating from side to side, to the point it veers off the track. 
 
 2. Describe how the final hyperparameters were chosen.
 
+The hyperparameters were basically hand chosen. The technique was to tweak one parameter at a time. I also went to the knowledge forum looking for different strategies in tweaking the parameters. 
+
+I made a couple of failed attempts at implementing twiddle. The idea behind twiddle is straightforward, however, implementing it with the unity simulator was difficult. For example, simply resetting the simulator with new parameters was not straightforward.  
 
 ## Basic Build Instructions
 
